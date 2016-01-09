@@ -18,6 +18,7 @@ function stateLens (state = {}, path = '') {
   state.__path = path
   state.get = get
   state.set = set
+  state.to = to
   state.destroy = destroy
   state.create = create
   return state
@@ -33,6 +34,10 @@ function create (initialState) {
 
 function set (subpath, value) {
   return toEphemeral(this.__path, reducer, setState(subpath, value))
+}
+
+function to (reducer, action) {
+  return toEphemeral(this.__path, reducer, action)
 }
 
 function get (subpath) {
