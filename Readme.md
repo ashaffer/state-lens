@@ -55,7 +55,7 @@ function localize (component) {
 
 ## Elmier local state wrapper
 
-This one lets each component have its own reducer/action pair. Checkout the elm-counter example to see how it's used.
+This one lets each component have its own reducer/actionss. Checkout the elm-counter example to see how it's used.
 
 ```javascript
 function localize (component) {
