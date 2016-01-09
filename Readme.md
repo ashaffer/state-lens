@@ -11,7 +11,23 @@ State cursor/lens thing
 
 ## Usage
 
-Just an experiment right now to create a minimal state lens/cursor thing to use for local state in [deku](https://github.com/dekujs/deku).
+Just an experiment right now to create a minimal state lens/cursor thing to use for local state in [deku](https://github.com/dekujs/deku). Put a stateLens in your initialState like this:
+
+```javascript
+import ephemeral from 'redux-ephemeral'
+import {createStore} from 'redux'
+import reducer from './reducer'
+
+const store = createStore(ephemeral('ui', reducer), {
+  ui: stateLens()
+})
+
+// ...
+
+render(<App state={store.getState().ui})
+```
+
+Then pass state in as a prop to any component that wants state, and has been wrapped by the code below.
 
 ## Deku component wrapper
 
