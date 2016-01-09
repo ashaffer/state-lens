@@ -2,7 +2,7 @@
   "name": "state-lens",
   "description": "State cursor/lens thing",
   "repository": "git://github.com/ashaffer/state-lens.git",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "make build",
